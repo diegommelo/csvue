@@ -1,18 +1,32 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>{{balance}}</h1>
+    <Team />
+    <PlayerList :players="players.five" price="5" />
+    <PlayerList :players="players.four" price="4" />
+    <PlayerList :players="players.three" price="3" />
+    <PlayerList :players="players.two" price="2" />
+    <PlayerList :players="players.one" price="1" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import PlayerList from '@/components/PlayerList.vue'
+import Team from '@/components/Team.vue'
+import {mapState} from 'vuex'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    PlayerList,
+    Team
+  },
+  computed: {
+    ...mapState({
+      players: state => state.players,
+      balance: state => state.balance
+    })
   }
 }
 </script>
