@@ -1,8 +1,7 @@
 <template>
   <div>
-    <h1>team</h1>
-    <div class="team">
-      <div v-for="(player, i) in team" :key="i">
+    <div v-if="team.length > 0" class="team">
+      <div v-for="(player, i) in team" :key="i" @click="sellPlayer(i)" class="player">
         <Player :player="player" />
       </div>
     </div>
@@ -10,7 +9,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 import Player from './Player.vue'
 
 export default {
@@ -23,10 +22,15 @@ export default {
       type: String,
     }
   },
+  methods: {
+    ...mapActions([
+      'sellPlayer'
+    ])
+  },
   computed: {
-    ...mapState({
-      team: state => state.team
-    })
+    ...mapGetters(
+      {team: 'getTeam'}
+    )
   }
 }
 </script>
@@ -39,4 +43,5 @@ export default {
     max-width: 700px;
     margin: 0 auto; 
   }
+
 </style>

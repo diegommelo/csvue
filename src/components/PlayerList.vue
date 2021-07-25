@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import {mapActions} from 'vuex';
+import {mapActions, mapState} from 'vuex';
 import Player from './Player.vue';
 
 export default {
@@ -27,6 +27,11 @@ export default {
   methods: {
     ...mapActions(['buyPlayer']),
   },
+  computed: {
+    ...mapState({
+      pick: state => state.pick
+    })
+  }
 }
 </script>
 
@@ -39,16 +44,7 @@ export default {
     max-width: 700px;
     margin: 0 auto; 
   }
-  .player {
-    flex: 1;
-    font-weight: bold;
-    font-size: 1.2em;
-    transition: transform .2s; /* Animation */
-  }
-  .player:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-  }
+
   .price {
     color: #999;
     font-size: 2.6em;

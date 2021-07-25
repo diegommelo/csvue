@@ -1,6 +1,9 @@
 <template>
   <div class="home">
-    <h1>{{balance}}</h1>
+    <h2>Monte seu</h2>
+    <h1>DREAM TEAM</h1>
+    <h2>com R$15</h2>    
+    <h3>Saldo: R${{balance}}</h3>
     <Team />
     <PlayerList :players="players.five" price="5" />
     <PlayerList :players="players.four" price="4" />
@@ -30,3 +33,16 @@ export default {
   }
 }
 </script>
+
+<style>
+  .player {
+    flex: 1;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: transform .2s; /* Animation */
+  }  
+  .player:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }  
+</style>
