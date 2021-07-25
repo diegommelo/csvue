@@ -1,11 +1,12 @@
 <template>
   <div>
+    
     <div class="player-list">
       <div class="price">
-        <p>${{price}}</p>
+        <p>R${{price}}</p>
       </div>
       <div v-for="(player, i) in players" :key="i" class="player" @click="buyPlayer(player)">
-        <Player :player="player" />
+        <Player :player="player" :class="{selected: isSelected(player)}" />
       </div>
     </div>
   </div>
@@ -21,22 +22,37 @@ export default {
     Player
   },
   props: {
-    players: Array,
-    price: String
+    players: {
+      type: Array,
+      required: true
+    },
+    price: {
+      type: String,
+      required: true
+    }
   },
   methods: {
     ...mapActions(['buyPlayer']),
+    isSelected(player) {
+      return this.team.find(p => p.name === player.name)
+    }
   },
   computed: {
     ...mapState({
-      pick: state => state.pick
-    })
+      pick: state => state.pick,
+      team: state => state.team
+    }),
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style lang="scss">
+  .selected p{
+    background-color:rgb(73, 92, 110, 0.5);
+    border: 1px solid #495867;
+    
+  }
   .player-list {
     display: flex;
     flex-direction: row;

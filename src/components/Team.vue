@@ -43,5 +43,9 @@ export default {
     max-width: 700px;
     margin: 0 auto; 
   }
+  .team .player:hover {
+    filter: grayscale(100%);
+    text-decoration: line-through;
+  }
 
 </style>

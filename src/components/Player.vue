@@ -21,7 +21,7 @@ export default {
 
 <style scoped>
   .player-name {
-    margin:10px 0;
+    margin:5px 0;
     font-size: 1.5rem;
     font-weight: bold;
   }

@@ -9,24 +9,40 @@
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  body {
+    background-color: #2d3844;
+  }
+  p {
+    padding: 0;
+    margin: 0;
+  }
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #87a3bf;
+  }
+  #nav {
+    padding: 30px;
 
-#nav {
-  padding: 30px;
+    a {
+      font-weight: bold;
+      color: #2c3e50;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+      &.router-link-exact-active {
+        color: #42b983;
+      }
     }
   }
-}
+  .player {
+    flex: 1;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: transform .2s;
+  }  
+  .player:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }  
 </style>

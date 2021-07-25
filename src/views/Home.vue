@@ -1,14 +1,14 @@
 <template>
   <div class="home">
-    <h2>Monte seu</h2>
-    <h1>DREAM TEAM</h1>
-    <h2>com R$15</h2>    
-    <h3>Saldo: R${{balance}}</h3>
+    <p>Monte seu</p>
+    <p>DREAM TEAM</p>
+    <p>com R$15</p>    
+    <p>Saldo: R${{balance}}</p>
     <Team />
     <PlayerList :players="players.five" price="5" />
-    <PlayerList :players="players.four" price="4" />
+    <PlayerList :players="players.four" price="4" class="stripe" />
     <PlayerList :players="players.three" price="3" />
-    <PlayerList :players="players.two" price="2" />
+    <PlayerList :players="players.two" price="2" class="stripe" />
     <PlayerList :players="players.one" price="1" />
   </div>
 </template>
@@ -34,15 +34,12 @@ export default {
 }
 </script>
 
-<style>
-  .player {
-    flex: 1;
-    font-weight: bold;
-    font-size: 1.2em;
-    transition: transform .2s; /* Animation */
-  }  
-  .player:hover {
-    cursor: pointer;
-    transform: scale(1.1);
+<style scoped>
+  p {
+    margin:0;
+    padding: 0;
+  }
+  .stripe {
+    background-color: rgba(35,45,56,.8);
   }  
 </style>
