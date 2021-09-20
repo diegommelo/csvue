@@ -6,7 +6,7 @@
       <p>com R$15</p>    
       <p>Saldo: R${{balance}}</p>
     </div>
-    <div :class="[{sticky: isSticky}, teste]" ref="team">
+    <div :class="[{sticky: isSticky}]" ref="team">
       <div :class="[{showBtn: isBtnHidden}, showTeamClass]">
         <button class="btn btn-show" @click="showTeam">Mostrar</button>
         <div class="saldo">
@@ -47,7 +47,7 @@ export default {
       showTeamClass: 'show-team',
       slideUp: 'slide-up',
       slideDown: 'slide-down',
-      teste: 'teste'
+      visible: 'visible'
     }
   },
   methods: {
@@ -55,7 +55,7 @@ export default {
       this.scrollPosition = window.scrollY;
       if (this.scrollPosition >= 20) {
         if(this.isSliding) {
-          this.$refs.team.classList.add('slide-down')
+          this.$refs.team.classList.add('not-visible')
         }
       }
       if (this.scrollPosition > 10) {
@@ -72,7 +72,15 @@ export default {
     showTeam() {
       this.isSliding = !this.isSliding;
       this.isHidden = !this.isHidden;
-      this.$refs.team.classList.toggle('slide-down');
+      if(this.$refs.team.classList.contains('not-visible')) {
+        this.$refs.team.classList.remove('not-visible')
+        this.$refs.team.classList.toggle('slide-up')
+        console.log('aqui')
+      } else {
+        this.$refs.team.classList.toggle('slide-down');
+        this.$refs.team.classList.toggle('slide-up');
+        console.log('ali')
+      }
     }
   },
   created() {
@@ -115,7 +123,7 @@ export default {
     transition: .4s ease-in-out;      
   }
   .slide-down {
-    transform: translateY(100%) !important;
+    transform: translateY(100%);
     transition: .4s ease-in-out;      
   }
   .hidden, .showBtn {
@@ -138,8 +146,10 @@ export default {
     font-weight: bold;
     font-size: 1.3em;
   }
-  .teste {
-    transform: translate(0);
-    transition: .4s ease-in-out;      
+  .visible {
+    transform: translateY(0);
+  }
+  .not-visible {
+    transform: translateY(100%);
   }
 </style>
