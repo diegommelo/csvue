@@ -3,6 +3,7 @@
     <div>
       <img :src="player.pic" class="player-avatar" />
       <p class="player-name">{{ player.name }}</p>
+      <p v-if="showPrice" class="player-price">R$ {{player.price}}</p>
     </div>
   </div>
 </template>
@@ -14,6 +15,10 @@ export default {
     player: {
       type: Object,
       required: true
+    },
+    showPrice: {
+      type: Boolean,
+      required: true,
     }
   }
 }
@@ -29,6 +34,7 @@ export default {
     width: 160px;
     height: 160px;
     object-fit: cover;
-    object-position: 0 -500%; 
+    object-position: 0 -500%;
+    margin-top:-10px;
   }
 </style>

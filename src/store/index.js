@@ -41,13 +41,12 @@ export default new Vuex.Store({
     reset(state) {
       state.balance = 15
       state.team = [
-        {name: 'Player #1', pic:'avatar.png', price: 0},
-        {name: 'Player #2', pic:'avatar.png', price: 0},
-        {name: 'Player #3', pic:'avatar.png', price: 0},
-        {name: 'Player #4', pic:'avatar.png', price: 0},
-        {name: 'Player #5', pic:'avatar.png', price: 0},                                        
+        {name: 'Player #1', pic:'avatar.png', price: 0, picked: false},
+        {name: 'Player #2', pic:'avatar.png', price: 0, picked: false},
+        {name: 'Player #3', pic:'avatar.png', price: 0, picked: false},
+        {name: 'Player #4', pic:'avatar.png', price: 0, picked: false},
+        {name: 'Player #5', pic:'avatar.png', price: 0, picked: false},                                     
       ]
-      state.pick = 0
     }
   },
   actions: {

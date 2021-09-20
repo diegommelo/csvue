@@ -6,7 +6,7 @@
         <p>R${{price}}</p>
       </div>
       <div v-for="(player, i) in players" :key="i" class="player" @click="buyPlayer(player)">
-        <Player :player="player" :class="{selected: isSelected(player)}" />
+        <Player :player="player" :class="{selected: isSelected(player)}" :showPrice="false" />
       </div>
     </div>
   </div>
@@ -51,7 +51,11 @@ export default {
   .selected p{
     background-color:rgb(73, 92, 110, 0.5);
     border: 1px solid #495867;
-    
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+    display:inline-block;
+    padding:0 8px;        
   }
   .player-list {
     display: flex;

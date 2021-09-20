@@ -2,7 +2,7 @@
   <div>
     <div v-if="team.length > 0" class="team">
       <div v-for="(player, i) in team" :key="i" @click="sellPlayer(i)" class="player">
-        <Player :player="player" />
+        <Player :player="player" :showPrice="true" />
       </div>
     </div>
   </div>
@@ -41,11 +41,13 @@ export default {
     flex-direction: row;
     justify-content: space-around;
     max-width: 700px;
-    margin: 0 auto; 
+    margin: 10px auto; 
   }
   .team .player:hover {
     filter: grayscale(100%);
     text-decoration: line-through;
   }
-
+  .player-price {
+    font-size:1.1rem;
+  }
 </style>
