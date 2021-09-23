@@ -6,15 +6,13 @@
       <p>com R$15</p>    
       <p>Saldo: R${{balance}}</p>
     </div>
-    <div :class="[{sticky: isSticky}]" ref="team">
-      <div :class="[{showBtn: isBtnHidden}, showTeamClass]">
-        <button class="btn btn-show" @click="showTeam">Mostrar</button>
+      <div :class="[{showBtn: isBtnHidden}, {sticky: isSticky}, showTeamClass]">
         <div class="saldo">
+          <p>{{picked.length}}/5</p>
           <p><span class="balance">R${{balance}}</span></p>
         </div>
       </div>
-      <Team  :class="[teamBGClass]" />
-    </div>
+    <Team  :class="[teamBGClass]" />
     <PlayerList :players="players.five" price="5" />
     <PlayerList :players="players.four" price="4" class="stripe" />
     <PlayerList :players="players.three" price="3" />
@@ -27,7 +25,7 @@
 // @ is an alias to /src
 import PlayerList from '@/components/PlayerList.vue'
 import Team from '@/components/Team.vue'
-import {mapState} from 'vuex'
+import {mapState, mapGetters} from 'vuex'
 
 export default {
   name: 'Home',
@@ -60,28 +58,15 @@ export default {
       }
       if (this.scrollPosition > 10) {
         this.isSticky = true;
-        this.isHidden = true;
+        //this.isHidden = true;
         this.isBtnHidden = false;
 
       } else {
         this.isSticky = false;
-        this.isHidden = false;
+        //this.isHidden = false;
         this.isBtnHidden = true;
       }
     },
-    showTeam() {
-      this.isSliding = !this.isSliding;
-      this.isHidden = !this.isHidden;
-      if(this.$refs.team.classList.contains('not-visible')) {
-        this.$refs.team.classList.remove('not-visible')
-        this.$refs.team.classList.toggle('slide-up')
-        console.log('aqui')
-      } else {
-        this.$refs.team.classList.toggle('slide-down');
-        this.$refs.team.classList.toggle('slide-up');
-        console.log('ali')
-      }
-    }
   },
   created() {
     window.addEventListener('scroll', this.handleScroll)
@@ -93,6 +78,9 @@ export default {
     ...mapState({
       players: state => state.players,
       balance: state => state.balance
+    }),
+    ...mapGetters({
+      picked: 'getPickedPlayers'
     })
   }
 }

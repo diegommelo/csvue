@@ -18,15 +18,17 @@ export default new Vuex.Store({
   },
   mutations: {
     buyPlayer(state, player) {
-      if (state.balance > 0 && player.price <= state.balance) {
-        if (!state.team.find(p => p.name === player.name)) {
+      let pickIndex = state.team.findIndex(p => p.name === player.name)
+      let pickedPlayers = state.team.filter(p => p.picked === true)
+        if (state.balance > 0 && player.price <= state.balance && pickIndex === -1 && pickedPlayers.length < 5) {
           let pickIndex = state.team.findIndex(p => p.picked === false)
           state.team[pickIndex].picked = true
           state.team[pickIndex].name = player.name
           state.team[pickIndex].price = player.price
           state.team[pickIndex].pic = player.pic
           state.balance -= player.price
-        }
+      } else if (pickIndex !== -1) {
+          this.dispatch('sellPlayer', pickIndex)        
       }
     },
     sellPlayer(state, pick) {
@@ -63,6 +65,9 @@ export default new Vuex.Store({
   getters: {
     getTeam(state) {
       return state.team
+    },
+    getPickedPlayers(state) {
+      return state.team.filter(p => p.picked)
     }
   }
 })
