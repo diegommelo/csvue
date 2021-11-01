@@ -54,7 +54,6 @@ export default {
     -webkit-transition: ease-out 0.4s;
     -moz-transition: ease-out 0.4s;
     transition: ease-out 0.4s;
-    display:inline-block;
     padding:0 8px;        
   }
   .player-list {

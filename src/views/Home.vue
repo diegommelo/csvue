@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <div class="header">
+      <p>🇧🇷</p>
       <p>Monte seu</p>
       <p><strong>DREAM TEAM</strong></p>
       <p>com R$15</p>    

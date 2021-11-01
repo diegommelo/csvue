@@ -46,7 +46,8 @@ export default {
     .player-name {
       font-size: 0.8rem;
       margin-top: 0;
-      margin-bottom: 5px;
+      margin-bottom: 2px;
+      margin-top: -3px;
     }
     .player-price {
       font-size: 0.8rem;
