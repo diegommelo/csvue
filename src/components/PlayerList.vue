@@ -64,7 +64,6 @@ export default {
     max-width: 700px;
     margin: 0 auto; 
   }
-
   .price {
     color: #999;
     font-size: 2.6em;
@@ -72,5 +71,12 @@ export default {
     align-items: center;
     display: flex;
     margin-right: 10px;
+  }
+
+  @media screen and (max-width: 767px) {
+    .price {
+      font-size: 1em;
+      margin-right: 0;
+    }
   }
 </style>

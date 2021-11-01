@@ -2,9 +2,9 @@
   <div class="home">
     <div class="header">
       <p>Monte seu</p>
-      <p>DREAM TEAM</p>
+      <p><strong>DREAM TEAM</strong></p>
       <p>com R$15</p>    
-      <p>Saldo: R${{balance}}</p>
+      <p class="saldo-header">Saldo: R${{balance}}</p>
     </div>
       <div :class="[{showBtn: isBtnHidden}, {sticky: isSticky}, showTeamClass]">
         <div class="saldo">
@@ -103,8 +103,6 @@ export default {
   }
   .team-bg {
     background-color: rgba(35,45,56,.8);
-    width: 100%;   
-    
   }
   .slide-up {
     transform: translateY(0);
@@ -139,5 +137,36 @@ export default {
   }
   .not-visible {
     transform: translateY(100%);
+  }
+  .saldo-header {
+    margin-top: 35px;
+    font-weight: bold;
+  }
+  .header {
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+  .header p {
+    font-size: 2em;
+  }
+
+  @media screen and (max-width: 767px) {
+    .header {
+      margin-bottom: 20px;
+      margin-top: 0;
+    }
+    .saldo-header {
+      margin-top: 15px;
+    }
+    .show-team {
+      display: none;
+    }
+    .team-bg {
+      padding-top: 2px;
+    }
+    .header p {
+      font-size: 1.1em;
+      line-height: 25px;
+    }
   }
 </style>

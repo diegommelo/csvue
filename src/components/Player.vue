@@ -37,4 +37,19 @@ export default {
     object-position: 0 -500%;
     margin-top:-10px;
   }
+
+  @media screen and (max-width: 767px) {
+    .player-avatar {
+      width: 64px;
+      height: 64px;
+    }
+    .player-name {
+      font-size: 0.8rem;
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+    .player-price {
+      font-size: 0.8rem;
+    }
+  }
 </style>

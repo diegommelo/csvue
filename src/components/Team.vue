@@ -50,4 +50,5 @@ export default {
   .player-price {
     font-size:1.1rem;
   }
+
 </style>
