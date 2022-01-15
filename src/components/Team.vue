@@ -47,8 +47,6 @@ export default {
     filter: grayscale(100%);
     text-decoration: line-through;
   }
-  .player-price {
-    font-size:1.1rem;
-  }
+
 
 </style>

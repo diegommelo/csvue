@@ -2,17 +2,17 @@
   <div class="home">
     <div class="header">
       <p>Monte seu</p>
-      <p><strong>DREAM TEAM</strong></p>
+      <p><strong>💃 LAST DANCE 💃</strong></p>
       <p>com R$15</p>    
       <p class="saldo-header">Saldo: R${{balance}}</p>
     </div>
-      <div :class="[{showBtn: isBtnHidden}, {sticky: isSticky}, showTeamClass]">
-        <div class="saldo">
-          <p>{{picked.length}}/5</p>
-          <p><span class="balance">R${{balance}}</span></p>
-        </div>
+    <div :class="[{showBtn: isBtnHidden}, {sticky: isSticky}, showTeamClass]">
+      <div class="saldo">
+        <p>{{picked.length}}/5</p>
+        <p><span class="balance">R${{balance}}</span></p>
       </div>
-    <Team  :class="[teamBGClass]" />
+    </div>
+    <Team :class="[teamBGClass]" />
     <PlayerList :players="players.five" price="5" />
     <PlayerList :players="players.four" price="4" class="stripe" />
     <PlayerList :players="players.three" price="3" />
@@ -58,12 +58,9 @@ export default {
       }
       if (this.scrollPosition > 10) {
         this.isSticky = true;
-        //this.isHidden = true;
         this.isBtnHidden = false;
-
       } else {
         this.isSticky = false;
-        //this.isHidden = false;
         this.isBtnHidden = true;
       }
     },

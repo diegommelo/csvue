@@ -1,12 +1,11 @@
 <template>
   <div>
-    
     <div class="player-list">
       <div class="price">
         <p>R${{price}}</p>
       </div>
       <div v-for="(player, i) in players" :key="i" class="player" @click="buyPlayer(player)">
-        <Player :player="player" :class="{selected: isSelected(player)}" :showPrice="false" />
+        <Player :player="player" :class="[{selected: isSelected(player)}, {gray: isTeamFull}]" :showPrice="false" />
       </div>
     </div>
   </div>
@@ -15,6 +14,7 @@
 <script>
 import {mapActions, mapState} from 'vuex';
 import Player from './Player.vue';
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'PlayerList',
@@ -42,12 +42,19 @@ export default {
       pick: state => state.pick,
       team: state => state.team
     }),
+    ...mapGetters({
+      isTeamFull: 'isTeamFull'
+    })
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
+  .selected {
+      filter: grayscale(0%) !important;
+      transition: filter 0.5s;
+  }
   .selected p{
     background-color:rgb(73, 92, 110, 0.5);
     border: 1px solid #495867;
@@ -55,7 +62,7 @@ export default {
     -moz-transition: ease-out 0.4s;
     transition: ease-out 0.4s;
     display:inline-block;
-    padding:0 8px;        
+    padding:0 8px;
   }
   .player-list {
     display: flex;
@@ -71,6 +78,10 @@ export default {
     align-items: center;
     display: flex;
     margin-right: 10px;
+  }
+  .gray {
+    filter: grayscale(100%);
+    transition: filter 0.5s;
   }
 
   @media screen and (max-width: 767px) {

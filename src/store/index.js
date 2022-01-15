@@ -68,6 +68,9 @@ export default new Vuex.Store({
     },
     getPickedPlayers(state) {
       return state.team.filter(p => p.picked)
+    },
+    isTeamFull(state) {
+      return state.team.filter(p => p.picked).length === 5
     }
   }
 })

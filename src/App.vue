@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
-    </div>
+    </div> -->
     <router-view/>
   </div>
 </template>
@@ -22,6 +22,12 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #87a3bf;
+    margin-top: 20px;
+  }
+  @media screen and (min-width: 768px) {
+    #app {
+      margin-top: 60px;
+    }
   }
   #nav {
     padding: 30px;

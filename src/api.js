@@ -11,21 +11,22 @@ export const players = {
     { name: "VINI", price: 4, pic: "https://img-cdn.hltv.org/playerbodyshot/a5LgJKz8LmlG-VMDsx9mt2.png?ixlib=java-2.1.0&w=400&s=a1d4d8cd2f284e6346b8cafbe115dcb2"},
     { name: "v$m", price: 4, pic: "https://img-cdn.hltv.org/playerbodyshot/LR7VWWC1VUaavFo-4ZowmD.png?ixlib=java-2.1.0&w=400&s=c7dba3be8c668a3f2610ae284caa50b3"},
     { name: "HEN1", price: 4, pic:"https://img-cdn.hltv.org/playerbodyshot/EzvijKP3ouqz8NGwajAZhw.png?ixlib=java-2.1.0&w=400&s=17d5233ee597fd0d03afb4fa59bbd1ad"},
-    { name: "Fer", price: 4, pic: "https://img-cdn.hltv.org/playerbodyshot/SCMOFHFHPg_Fy2mPuYcS4r.png?ixlib=java-2.1.0&w=400&s=baefdca10445f103eaaef864c5214feb"}    
+    { name: "TACO", price: 4, pic:"https://img-cdn.hltv.org/playerbodyshot/4JccTR7Pnw1h3k56GQ3qQ8.png?ixlib=java-2.1.0&w=400&s=4d32fc753336f423a9af9dc0110cd9fe"},
   ],
   three: [
     { name: "Boltz", price: 3, pic:"https://img-cdn.hltv.org/playerbodyshot/uVF8dfZnAWvQh8sk1q_qDZ.png?ixlib=java-2.1.0&w=400&s=eb7f44cfc515f9c07f894b9bf058ccd4"},
     { name: "leo_drk", price: 3, pic: "https://img-cdn.hltv.org/playerbodyshot/evCaH0Fce8UJfF2iXM0Yi2.png?ixlib=java-2.1.0&w=400&s=c536f3c661b5023443366e6d7dd68ba9"},
     { name: "Felps", price: 3, pic: "https://img-cdn.hltv.org/playerbodyshot/oZoEIr6IzN4oKYf8zShvv2.png?ixlib=java-2.1.0&w=400&s=46a4535603c405da17db1000e938dfc8"},
-    { name: "TACO", price: 3, pic:"https://img-cdn.hltv.org/playerbodyshot/4JccTR7Pnw1h3k56GQ3qQ8.png?ixlib=java-2.1.0&w=400&s=4d32fc753336f423a9af9dc0110cd9fe"},
-    { name: "LUCAS1", price: 3, pic: "https://img-cdn.hltv.org/playerbodyshot/1NBILxVoOQ--iWEbDGBwdf.png?ixlib=java-2.1.0&w=400&s=2c378fbd483db06b4d3a48b06d932e3c"}    
+    { name: "LUCAS1", price: 3, pic: "https://img-cdn.hltv.org/playerbodyshot/1NBILxVoOQ--iWEbDGBwdf.png?ixlib=java-2.1.0&w=400&s=2c378fbd483db06b4d3a48b06d932e3c"},
+    { name: "trk", price: 3, pic:"https://img-cdn.hltv.org/playerbodyshot/iybxS6LEPPMtOVrM_v2Ra9.png?ixlib=java-2.1.0&w=400&s=476bffc70ad45eb6f00ea4c705af9629"},
   ],
   two: [
     { name: "fnx", price: 2, pic:"https://img-cdn.hltv.org/playerbodyshot/UjFv1NBK1RCWmH50U3z-7F.png?ixlib=java-2.1.0&w=400&s=db0c935f79c9769df6541555001b01ee"},
     { name: "Steel", price: 2, pic: "https://img-cdn.hltv.org/playerbodyshot/-vJw4NlTx6c7jj-nD5RC5C.png?ixlib=java-2.1.0&w=400&s=41f2e910eee7405e961a1fd49b01e57c"},
     { name: "Chelo", price: 2, pic: "https://img-cdn.hltv.org/playerbodyshot/-X2DEVC3GMFvUpff22jHuC.png?ixlib=java-2.1.0&w=400&s=d7cd6b50a13701042e709033c38b62a9"},
-    { name: "trk", price: 2, pic:"https://img-cdn.hltv.org/playerbodyshot/iybxS6LEPPMtOVrM_v2Ra9.png?ixlib=java-2.1.0&w=400&s=476bffc70ad45eb6f00ea4c705af9629"},
-    { name: "yel", price: 2, pic: "https://img-cdn.hltv.org/playerbodyshot/bCUDXgrPmPIXlPV5U82znI.png?ixlib=java-2.1.0&w=400&s=ebda063c945ad18389c8c160fef1c368"}    
+    { name: "yel", price: 2, pic: "https://img-cdn.hltv.org/playerbodyshot/bCUDXgrPmPIXlPV5U82znI.png?ixlib=java-2.1.0&w=400&s=ebda063c945ad18389c8c160fef1c368"},
+    { name: "Fer", price: 2, pic: "https://img-cdn.hltv.org/playerbodyshot/SCMOFHFHPg_Fy2mPuYcS4r.png?ixlib=java-2.1.0&w=400&s=baefdca10445f103eaaef864c5214feb"}    
+
   ],
   one: [
     { name: "shz", price: 1, pic:"https://img-cdn.hltv.org/playerbodyshot/0LCEbS-mhQxg6Vy0eQYakB.png?ixlib=java-2.1.0&w=400&s=30b362076e668aadc28828026bf2e546"},

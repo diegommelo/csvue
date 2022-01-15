@@ -37,6 +37,9 @@ export default {
     object-position: 0 -500%;
     margin-top:-10px;
   }
+  .player-price {
+    padding-bottom: 10px;
+  }
 
   @media screen and (max-width: 767px) {
     .player-avatar {
