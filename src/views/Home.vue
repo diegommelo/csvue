@@ -13,6 +13,9 @@
       </div>
     </div>
     <Team :class="[teamBGClass]" />
+    <div class="reset">
+      <button id="reset" @click="reset" class="btn">Limpar</button>
+    </div>
     <PlayerList :players="players.five" price="5" />
     <PlayerList :players="players.four" price="4" class="stripe" />
     <PlayerList :players="players.three" price="3" />
@@ -64,6 +67,9 @@ export default {
         this.isBtnHidden = true;
       }
     },
+    reset() {
+      this.$store.dispatch('reset');
+    }
   },
   created() {
     window.addEventListener('scroll', this.handleScroll)
@@ -145,6 +151,22 @@ export default {
   }
   .header p {
     font-size: 2em;
+  }
+  .reset {
+    margin: 20px;
+  }
+  .btn {
+    background-color: rgba(35,45,56,.8);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  .btn:hover {
+    background-color: rgba(12, 15, 19, 0.8);
+    color: #fff;
   }
 
   @media screen and (max-width: 767px) {
