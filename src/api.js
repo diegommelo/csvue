@@ -29,7 +29,7 @@ export const players = {
 
   ],
   one: [
-    { name: "shz", price: 1, pic:"https://img-cdn.hltv.org/playerbodyshot/0LCEbS-mhQxg6Vy0eQYakB.png?ixlib=java-2.1.0&w=400&s=30b362076e668aadc28828026bf2e546"},
+    { name: "brnz4n", price: 1, pic:"https://img-cdn.hltv.org/playerbodyshot/93Sob2eB0GySjFJtC9FLCD.png?ixlib=java-2.1.0&w=400&s=f4035295e95d60ffc80066a8d695e22b"},
     { name: "latto", price: 1, pic: "https://img-cdn.hltv.org/playerbodyshot/OHsM5l27JKNgjP-iO6_gpC.png?ixlib=java-2.1.0&w=400&s=b381d2632d6e97ee960b557e82b388b6"},
     { name: "exit", price: 1, pic: "https://img-cdn.hltv.org/playerbodyshot/pbQ9kA4DQIE5gmEIFH9Qm_.png?ixlib=java-2.1.0&w=400&s=d601763fdf46988e907fd914eba52140"},
     { name: "honda", price: 1, pic:"https://img-cdn.hltv.org/playerbodyshot/CvjjCg77H5xsOAT0ynTTyZ.png?ixlib=java-2.1.0&w=400&s=da66a8549182acc0d77b9b1ba4529984"},
